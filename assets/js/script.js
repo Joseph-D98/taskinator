@@ -226,6 +226,7 @@ var taskStatusChangeHandler = function(event) {
 
 };
 
+
 var dragTaskHandler = function(event) {
     var taskId = event.target.getAttribute("data-task-id");
     event.dataTransfer.setData("text/plain", taskId);
@@ -264,9 +265,9 @@ var dropTaskHandler = function(event) {
     dropZoneEl.appendChild(draggableElement);
 
     // loop through tasks array to find and update the updated task's status
-    for (var i = 0; i < tasks.length; i ++) {
+    for (var i = 0; i < tasks.length; i++) {
         if (tasks[i].id === parseInt(id)){
-            tasks[i].status === statusSelectEl.value.toLowerCase();
+            tasks[i].status = statusSelectEl.value.toLowerCase();
         }
     }
 
@@ -335,9 +336,9 @@ var loadTasks = function() {
         // increase task counter for next unique id
         taskIdCounter++;
 
-        console.log(listItemEl);
+        
     };
-
+    //console.log(listItemEl);
     }
 
     
