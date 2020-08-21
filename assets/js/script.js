@@ -306,7 +306,7 @@ var loadTasks = function() {
     }
 
 };
-loadTasks();
+
 // event delegations
 pageContentEl.addEventListener("click", taskButtonHandler);
 pageContentEl.addEventListener("change", taskStatusChangeHandler);
@@ -315,3 +315,4 @@ pageContentEl.addEventListener("dragover", dropZoneDragHandler);
 pageContentEl.addEventListener("drop", dropTaskHandler);
 pageContentEl.addEventListener("dragleave", dragLeaveHandler);
 
+loadTasks();
